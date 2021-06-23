@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
+*
+{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'ZCOOL KuaiLe', 'cursive';
+}
+.jstyle > h4 
+{
+    text-align: center;
+    color: blueviolet;
+    font-size: 28px;
+    font-family: 'ZCOOL KuaiLe', 'cursive';
+}
+body
+{
+    background-color: #0c1b5c;
+}
+header  
+{
+    height: 50px;
+}
+.row 
+{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+header > nav 
+{
+background-color: cadetblue;
+border-bottom: 3px rgb(5, 7, 146) solid;
+}
+.left-side,.right-side,.score-table 
+{
+    height: 300px;
+    position: relative;
+    border-radius: 20px;    
+background-color: #000;
+}
+.left-side::after,.left-side::before,.right-side::after,.right-side::before,.score-table::after,.score-table::before
+{
+    position: absolute;
+    content: ' ';
+    background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fa9032,#ed2939);
+    background-size: 400% 400%;
+    width: calc(100% + 6px);    
+    height: 306px;
+    top: -3px;
+    left: -3px;
+    z-index: -1;
+    border-radius: 20px;
+    animation: animate 3s alternate ease-in infinite;
+}
+.score-table::after,.score-table::before
+{
+    width: calc(100% + 6px); 
+}
+.score-table::after
+{
+    filter: blur(12px);
+}
+.left-side::after,.right-side::after
+{
+    filter: blur(20px);
+}
+.name-btn{
+    padding:4px 7px 4px 7px;
+    border-radius:  25px; 
+    background-color: #ed2939;
+    color: #fa9032;
+    outline: 0;
+    border: 1px darkgray solid;
+}
+.enname{
+    border-radius: 999px;
+    border: 2px darkred solid;
+    outline: 0;
+    color: #e25822;
+    font-weight: 900;
+    font-family: 'UnifrakturCook', cursive;
+}
+.enname::placeholder{
+    text-align: center;
+    color: #00ff00;
+    
+}
+.p1-score,.p2-score,.p1-choose,.p2-choose
+{
+    font-size: 45px;
+    font-family: 'Ruslan Display', cursive;
+    color: bisque;
+}
+
+.left-side > h4, .right-side>h4,.score-table>h4
+{
+    
+    text-align: center;
+    line-height: 50px;
+    font-size: 40px;
+    font-weight: 858;
+    cursor: pointer;
+    padding: 2%;
+    color: rgba(51,251,251,0.5);
+}
+.left-side > h4:first-child, .right-side>h4:first-child
+{
+    font-family: 'UnifrakturCook', cursive;
+}
+.score-table>h4
+{
+    color: #e25822cc;
+    font-family: 'UnifrakturCook', cursive;}
+@keyframes animate 
+{
+    0%
+    {
+        background-position: 0 50%;
+    }
+    50%
+    {
+        background-position: 50% 50%;
+    }
+    100%
+    {
+        background-position: 100% 50%;
+    }
+    
+}
+@media only screen and (max-width:1000px){
+    .left-side > h4, .right-side>h4,.score-table>h4,h4{
+       font-size: 20px !important;
+    line-height: 40px;
+   }
+  
+}
+@media only screen and (max-width:300px){
+    .left-side > h4, .right-side>h4,.score-table>h4,h4{
+       font-size: 12px !important;
+    line-height: 33px;
+   }
+  
+}
+@media only screen and (max-width:200px){
+    .left-side > h4, .right-side>h4,.score-table>h4,h4{
+       font-size: 8px !important;
+    line-height: 23px;
+   }
+  
+}
